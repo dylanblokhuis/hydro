@@ -1,0 +1,35 @@
+[package]
+name = "hydro"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+axum = "0.5.17"
+axum-macros = "0.2.3"
+tokio = { version = "1.21.2", features = ["full"] }
+swc = "0.232.53"
+swc_bundler = "0.192.47"
+swc_common = { version = "0.29.10", features = ["concurrent"] }
+swc_ecma_ast = "0.94.14"
+swc_ecma_codegen = "0.127.24"
+swc_ecma_loader = { version = "0.41.11", features = ["lru"] }
+swc_ecma_parser = "0.122.20"
+swc_ecma_transforms_base = "0.111.34"
+swc_ecma_transforms_proposal = "0.144.21"
+swc_ecma_transforms_react = "0.155.22"
+swc_ecma_transforms_typescript = "0.159.23"
+swc_ecma_visit = "0.80.14"
+path-clean = "0.1.0"
+rquickjs = "0.1.7"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+
+[[example]]
+name = "basic"
+path = "examples/basic/src/main.rs"
+
+[build-dependencies]
+attohttpc = "0.23.1"
